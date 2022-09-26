@@ -1,0 +1,348 @@
+/* _________________ Home _________________ */
+#home {
+    background: linear-gradient(#000000b4, #00000000), url(../../img/section1.png);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  #text-apresentacao h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+  #text-apresentacao h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .animacao h1 {
+    font-size: 2.5rem;
+  }
+  
+  .animacao span {
+    font-size: 2.5rem;
+    color: #fff;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #149ddd;
+  }
+
+  /* _________________ Sobre _________________ */
+  #sobre {
+    width: 100%;
+    height: auto;
+  }
+
+  .sobre {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*_ Area de apresentação _*/
+  .foto-apresentacao {
+    display: block;
+    margin-top: 20vh;
+    margin-left: 10%;
+    width: 40%;
+    height: auto;
+    float: left;
+  }
+  .foto-apresentacao img{
+    border-radius: 50%;
+    box-shadow: 10px 5px 5px #149ddd;
+  }
+  .text-apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    float: right;
+  }
+  .text-apresentacao h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    border-bottom: 0.5px solid #149ddd;
+  }
+  .text-apresentacao p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  /*_ Area de habilidades _*/
+  .habilidades {
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+  }
+  .habilidades h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    border-bottom: 0.5px solid #149ddd;
+  }
+  .habilidades-itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3.5rem;
+  }
+  
+  .habilidades-icon {
+    padding-left: 50px;
+  }
+  .habilidades-icon h2 {
+    font-size: 2rem;
+  }
+
+  .flex{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+  }
+  .flex h2{
+    font-size: 1.5rem;
+   }
+  .flex h3{
+    font-size: 1.5rem;
+   }
+  .itens{
+      width: 250px;
+      height: 20px;
+      border: 1px solid #149ddd;
+      margin: 0 20px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+  }
+  .inside1{
+      border-radius: 20px;
+      width: 90%;
+      height: 20px;
+      background: #149ddd;
+      animation: slide1 2s ease-in-out;
+  }
+  .inside2{
+    border-radius: 20px;
+    width: 80%;
+    height: 20px;
+    background: #149ddd;
+    animation: slide2 2s ease-in-out;
+  }
+  .inside3{
+    border-radius: 20px;
+    width: 65%;
+    height: 20px;
+    background: #149ddd;
+    animation: slide3 2s ease-in-out;
+  }
+  .inside4{
+    border-radius: 20px;
+    width: 50%;
+    height: 20px;
+    background: #149ddd;
+    animation: slide4 2s ease-in-out;
+  }
+  .inside5{
+    border-radius: 20px;
+    width: 20%;
+    height: 20px;
+    background: #149ddd;
+    animation: slide5 2s ease-in-out;
+  }
+
+  @keyframes slide1{
+  from{ width: 0; }
+  to{ width: 90%; }
+  }
+  @keyframes slide2{
+  from{ width: 0; }
+  to{ width: 80%; }
+  }
+  @keyframes slide3{
+  from{ width: 0; }
+  to{ width: 65%; }
+  }
+  @keyframes slide4{
+  from{width: 0;}
+  to{width: 50%;}
+  }
+  @keyframes slide5{
+  from{width: 0;}
+  to{width: 20%;}
+  }
+
+  /* _________________ Projetos _________________ */
+  #projetos {
+    width: 100%;
+    height: 100vh;
+  }
+  #projetos-h1 {
+    margin-top: 8vh;
+  }
+  #container-projetos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .swiper {
+    width: 80%;
+    height: 80vh;
+  }
+  .img-projetos {
+    width: 90%;
+    height: 60vh;
+  }
+  .foco-zoom:hover{
+    -moz-transform: scale(1);
+	  -webkit-transform: scale(1);
+	  transform: scale(1.02);
+  }
+  .cards {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .swiper-slide {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+
+    /* Centralizar o texto do slide verticalmente */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  /* _________________ Contato _________________ */
+  #contato {
+    width: 100%;
+    height: 100vh;
+  }
+
+
+  /* _________________ Media Query _________________ */
+  @media screen and (max-width: 1100px) {
+    /* Home */
+    #text-apresentacao h1 {
+      color: #fff;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    #text-apresentacao h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .animacao h1 {
+      font-size: 2rem;
+    }
+    
+    .animacao span {
+      font-size: 2rem;
+      color: #fff;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #149ddd;
+    }
+
+    /* Sobre */
+    .sobre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .foto-apresentacao img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .text-apresentacao {
+      margin-top: 10vh;
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+    .habilidades {
+      margin-top: 80vh;
+      margin-bottom: 20vh;
+    }
+    .itens {
+      width: 200px;
+    }
+
+    /* Projetos */
+    .img-projetos {
+      width: 100%;
+      height: 70vh;
+    }
+
+  }
+
+  @media screen and (max-width: 580px) {
+    /* Home */
+    #apresentacao {
+      margin-left: -35px;
+    }
+    
+    /* Sobre */
+    .foto-apresentacao img{
+      min-width: 250px;
+      margin-left: -55px;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .text-apresentacao {
+      min-width: 100%;
+      min-height: 40vh;
+      display: block;
+      text-align: center;
+      margin-top: 10vh;
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+    .texto-oculta {
+      visibility: hidden;
+    }
+    .habilidades {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10vh;
+    }
+    .habilidades-itens {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-left: -25px;
+    }
+    .habilidades-icon i{
+      font-size: 3rem;
+      color: #fff;
+      padding: 10px;
+    }
+
+    /* Projetos */
+    .img-projetos {
+      width: 100%;
+      height: 70vh;
+    }
+  }

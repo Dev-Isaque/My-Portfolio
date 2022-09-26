@@ -1,0 +1,130 @@
+.header-area {
+  background-image: linear-gradient(180deg, #000, transparent);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.site-logo {
+  font-size: 20px;
+  margin-left: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.navbar ul li a {
+  color: #fff;
+  padding: 22px;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navbar ul li a:hover {
+  opacity: 0.7;
+  border-bottom: 1px solid #149ddd;
+}
+
+.navbar ul li a i {
+  padding-right: 5px;
+}
+
+.nav-list a:hover, .nav-list .active, .nav-list li .active:focus, .nav-list li:hover > a {
+  opacity: 0.7;
+  border-bottom: 2px solid #149ddd;
+}
+.nav-lista:hover i, .nav-list .active i, .nav-list li .active:focus i, .nav-list li:hover > a i {
+  color: #149ddd;
+}
+
+.nav-btn {
+  border: none;
+  padding: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-btn span, 
+.nav-btn span:before, 
+.nav-btn span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: .3s;
+}
+.nav-btn span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+.nav-btn span:after {
+  content: '';
+  transform: translateY(6px);
+}
+.nav-btn.toggler-open span {
+  background-color: transparent;
+}
+.nav-btn.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-btn.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/* Media query Menu mobile */
+@media screen and (max-width: 999px) {
+  .nav-btn{
+    display: block;
+  }
+  .navbar {
+    min-height: 60px;
+    margin-right: 2px;
+  }
+  .navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 8vh);
+    left: 0;
+    top: 10vh;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(0,0,0,.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s;
+  }
+  .navbar ul li {
+    width: 100%;
+    display: block;
+    height: 100vh;
+    text-align: center;
+  }
+  .nav-list li a .titulo {
+    font-size: 2.2rem;
+  }
+  .navbar ul li a i {
+    display: block;
+    font-size: 2rem;
+    padding: 10px;
+  }
+  .navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+}
