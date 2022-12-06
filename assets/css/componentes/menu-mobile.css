@@ -92,18 +92,18 @@ a.site-logo {
     display: block;
   }
   .navbar {
-    min-height: 60px;
+    background-color: #000;
+    height: 10vh;
     margin-right: 2px;
   }
   .navbar ul {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 8vh);
+    height: calc(100vh - 10vh);
     left: 0;
     top: 10vh;
     flex-direction: column;
     align-items: center;
-    border-top: 1px solid #444;
     background-color: rgba(0,0,0,.75);
     max-height: 0;
     overflow: hidden;
@@ -111,16 +111,16 @@ a.site-logo {
   }
   .navbar ul li {
     width: 100%;
-    display: block;
-    height: 100vh;
+    display: block; 
+    height: 90vh;
     text-align: center;
   }
   .nav-list li a .titulo {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
-  .navbar ul li a i {
+  .navbar ul li a span i {
     display: block;
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 10px;
   }
   .navbar ul.open {
