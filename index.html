@@ -16,6 +16,10 @@
         <script src="https://kit.fontawesome.com/c6c843a371.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
         <!-- Swipper -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     
@@ -53,7 +57,7 @@
                 </li>
 
                 <li class="nav-link">
-                  <a href="#habilidades">
+                  <a href="#habilidades-container">
                     <span>
                       <i class="icon fa-solid fa-user"></i>
                     </span> 
@@ -113,23 +117,23 @@
 
                 <div class="sobre reveal">  <!-- Inicio container Apresentação -->
 
-                  <div class="foto-apresentacao reveal">
+                  <div class="foto-apresentacao">
                     <img src="./assets/img/perfil.jpg" alt="eu" width="80%">
                   </div>
-                  <div class="text-apresentacao reveal">
+                  <div class="text-apresentacao">
                     <h1 class="titulos"> Sobre Mim </h1>
 
-                    <p>Olá me chamo Isaque. Tenho 21 anos <br>
-                      Sou estudante de Sistemas de informação - Atualmente no 5° periodo. 
-                      Tenho iniciado minha experiência dentro da programação pela área do Front-End.<br>
-                      <br>
-                      <span class="texto-oculta"> Tudo Começou com um curso de desenvolvimento Web que comprei na plataforma Udemy, que me ensinou do 0 até aonde me encontro hoje em dia em questão de conhecimentos.<br>
-                      após ter concluido o curso decidir me aprofundar mais sobre o assunto, sendo assim comecei a ver as aulas do programa Discover disponibilizado pela plataforma de cursos da Rocketseat que por sinal eu recomendo qualquer um que esteja iniciando <br>
-                      participar dessa maratona. <br>
-                      Atualmente conclui o curso de Full Stack da Tech Academy - StartSe na qual me fez sentir que estava cade vez mais estava chegando a um degrau a menos no meu sonho de me tornar um Desenvolvedor Full Stack.
-                      </span>
-                    </p>
-                  </div>
+                    <div class="c-text-apresentacao">
+                        <p class="p-text-apresentacao">
+                          Olá me chamo Isaque. Tenho 21 anos <br>
+                          Sou estudante de Sistemas de informação - Atualmente no 5° periodo. 
+                          Tenho iniciado minha experiência dentro da programação pela área do Front-End.<br>
+                          Tudo Começou com um curso de desenvolvimento Web que comprei na plataforma Udemy, que me ensinou do 0 até aonde me encontro hoje em dia em questão de conhecimentos.<br>
+                          após ter concluido o curso decidir me aprofundar mais sobre o assunto, sendo assim comecei a ver as aulas do programa Discover disponibilizado pela plataforma de cursos da Rocketseat que por sinal eu recomendo qualquer um que esteja iniciando <br>
+                          participar dessa maratona. <br>
+                          Atualmente conclui o curso de Full Stack da Tech Academy - StartSe na qual me fez sentir que estava cade vez mais estava chegando a um degrau a menos no meu sonho de me tornar um Desenvolvedor Full Stack.
+                        </p>                       
+                    </div>
                   
                 </div>  <!-- Fim container Apresentação -->
 
@@ -137,7 +141,7 @@
             </section>
 
             <!-- Inicio container Habilidades -->
-            <section id="habilidades" class="section"> 
+            <section id="habilidades-container" class="section"> 
               <div class="habilidades reveal flex-center">  
                 <div>
                   <h1 class="titulos">Minhas Habilidades</h1>
@@ -188,21 +192,13 @@
                   <h1 class="titulos" id="projetos-h1"> Meus Projetos </h1>
                 </div>
 
-                  <div class="swiper mySwiper reveal container text-center">
-                    
-                      <div class="row">
-                        <div class="col">
-                          Column
-                        </div>
-                        <div class="col">
-                          Column
-                        </div>
-                        <div class="col">
-                          Column
-                        </div>
-                      </div>
-
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="./assets/img/perfil.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
+
+                </div>
 
               </div>              
             </section> <!-- Fim container  -->
@@ -224,18 +220,16 @@
         <!-- Java Script -->
         <script src="./assets/js/main.js"></script>
 
+        <!-- Jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 
         <!-- Animação typed - Home -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
+      
         <!-- Animação Reveal -->
         <script src="https://unpkg.com/scrollreveal"></script>
-        
+
         <script>
             var typed = new Typed(".auto-type", {
                 strings: ["Analista de Sistema Jr","Front end", "Freelancer", "Designer"],
@@ -243,14 +237,6 @@
                 backSpeed: 150,
                 loop: true
             })
-
-            var swiper = new Swiper(".mySwiper", {
-                navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-                },
-            });
-            
         </script>
     </body>
 </html>

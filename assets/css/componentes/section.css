@@ -1,4 +1,9 @@
 /* _________________ Home _________________ */
+.section{
+  background: #000;
+  color: #fff;
+} 
+
 #home {
     background: linear-gradient(#000000b4, #00000000), url(../../img/section1.png);
     background-position: center center;
@@ -75,11 +80,14 @@
   }
 
   /*_ Area de habilidades _*/
-
+  #habilidades-container {
+    width: 100%;
+    height: 100vh;
+  }
   .habilidades {
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 800px;
   }
   .habilidades h1 {
     text-transform: uppercase;
@@ -103,8 +111,6 @@
   }
 
   .flex{
-    display: flex;
-    margin: 20px;
     align-items: center;
   }
   .flex h2{
@@ -184,53 +190,7 @@
     width: 100%;
     height: 100vh;
   }
-  #projetos-h1 {
-    margin-top: 8vh;
-  }
-  #container-projetos {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
   
-  .swiper {
-    width: 80%;
-    height: 80vh;
-  }
-  .img-projetos {
-    width: 90%;
-    height: 60vh;
-  }
-  .foco-zoom:hover{
-    -moz-transform: scale(1);
-	  -webkit-transform: scale(1);
-	  transform: scale(1.02);
-  }
-  .cards {
-    width: 60%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .swiper-slide {
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    background: #000;
-
-    /* Centralizar o texto do slide verticalmente */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
 
   /* _________________ Contato _________________ */
   #contato {
@@ -240,13 +200,64 @@
 
 
   /* _________________ Media Query _________________ */
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 500px) {
+    /* Home */
+    .home {
+      width: 100%;
+      height: auto;
+    }
+    /* Sobre */
+    .sobre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .text-apresentacao {
+      min-width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .foto-apresentacao img{
+      width: 100%;
+      display: block;
+      height: auto;
+      margin-bottom: 50px;
+      margin-left: -10px;
+    }
+    .p-text-apresentacao {
+      padding: 10px;
+    }
+    .habilidades {
+      margin-top: 50px;
+    }
+    .habilidades-itens {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .habilidades-icon i{
+      font-size: 1.5rem;
+      color: #fff;
+      padding: 10px;
+    }
+
+    /* Projetos */
+    .img-projetos {
+      width: 100%;
+      height: 70vh;
+    }
+  }
+
+  @media (min-width: 501px) and (max-width: 1000px){
     /* Home */
     #text-apresentacao h1 {
       color: #fff;
       font-size: 3rem;
       margin-bottom: 10px;
     }
+
     #text-apresentacao h2 {
       color: #fff;
       font-size: 2.5rem;
@@ -270,6 +281,7 @@
       flex-direction: column;
       align-items: center;
       height: 100vh;
+      margin-left: -10px;
     }
     .foto-apresentacao img{
       display: block;
@@ -293,47 +305,4 @@
 
   }
 
-  @media screen and (max-width: 580px) {
-    /* Home */
-    #apresentacao {
-      margin-left: -35px;
-    }
-    
-    /* Sobre */
-    .foto-apresentacao img{
-      min-width: 250px;
-      margin-left: -55px;
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .text-apresentacao {
-      min-width: 100%;
-      min-height: 40vh;
-      display: block;
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 30px;
-    }
-    .texto-oculta {
-      visibility: hidden;
-    }
-    .habilidades-itens {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-    }
-    .habilidades-icon i{
-      font-size: 3rem;
-      color: #fff;
-      padding: 10px;
-    }
-
-    /* Projetos */
-    .img-projetos {
-      width: 100%;
-      height: 70vh;
-    }
-  }
+ 
