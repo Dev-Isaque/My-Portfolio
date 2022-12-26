@@ -2,6 +2,8 @@
 .section{
   background: #000;
   color: #fff;
+  width: 100%;
+  height: auto;
 } 
 
 #home {
@@ -44,16 +46,16 @@
   .sobre {
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /*_ Area de apresentação _*/
   .foto-apresentacao {
-    display: block;
-    margin-top: 20vh;
-    margin-left: 10%;
+    margin-right: 50px;
     width: 40%;
     height: auto;
-    float: left;
   }
   .foto-apresentacao img{
     border-radius: 50%;
@@ -64,7 +66,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 80%;
     height: 100vh;
     float: right;
   }
@@ -84,10 +86,9 @@
     width: 100%;
     height: 100vh;
   }
+
   .habilidades {
-    flex-direction: column;
-    width: 100%;
-    height: 800px;
+    padding-top: 10vh;
   }
   .habilidades h1 {
     text-transform: uppercase;
@@ -95,100 +96,64 @@
     margin-bottom: 50px;
     border-bottom: 0.5px solid #149ddd;
   }
-  .habilidades-itens {
+
+  .cards_habilidade{
+    padding: 40px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 3.5rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   
-  .habilidades-icon {
-    padding-left: 50px;
-  }
-  .habilidades-icon h2 {
-    font-size: 2rem;
+  .cards_habilidade .card_item{
+    padding: 40px 40px;
+    width: 15%;
   }
 
-  .flex{
-    align-items: center;
+  .card_item:hover {
+    box-shadow: 0 0 15px #149ddd;
   }
-  .flex h2{
-    font-size: 1.5rem;
-   }
-  .flex h3{
-    font-size: 1.5rem;
-   }
-  .itens{
-      width: 250px;
-      height: 20px;
-      border: 1px solid #149ddd;
-      margin: 0 20px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
+  
+  .cards_habilidade .card_inner{
+    background: #fff;
+    border-radius: 5px;
+    padding: 35px 20px;
+    min-width: 225px;
+    min-height: 315px;
+    max-height: 370px;
+    width: 100%;
   }
-  .inside1{
-      border-radius: 20px;
-      width: 90%;
-      height: 20px;
-      background: #149ddd;
-      animation: slide1 2s ease-in-out;
-  }
-  .inside2{
-    border-radius: 20px;
+  
+  .cards_habilidade .card_item img{
     width: 80%;
-    height: 20px;
-    background: #149ddd;
-    animation: slide2 2s ease-in-out;
+    height: auto;
+    margin-bottom: 5px;
   }
-  .inside3{
-    border-radius: 20px;
-    width: 65%;
-    height: 20px;
-    background: #149ddd;
-    animation: slide3 2s ease-in-out;
+  
+  .cards_habilidade .card_item .card_name{
+    color: #e36686;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .inside4{
-    border-radius: 20px;
-    width: 50%;
-    height: 20px;
-    background: #149ddd;
-    animation: slide4 2s ease-in-out;
+  
+  .cards_habilidade .card_item{
+    color: #b6c0c2;
+    font-size: 12px;
+    font-weight: 100;
+    margin: 5px 0 10px;
   }
-  .inside5{
-    border-radius: 20px;
-    width: 20%;
-    height: 20px;
-    background: #149ddd;
-    animation: slide5 2s ease-in-out;
-  }
-
-  @keyframes slide1{
-  from{ width: 0; }
-  to{ width: 90%; }
-  }
-  @keyframes slide2{
-  from{ width: 0; }
-  to{ width: 80%; }
-  }
-  @keyframes slide3{
-  from{ width: 0; }
-  to{ width: 65%; }
-  }
-  @keyframes slide4{
-  from{width: 0;}
-  to{width: 50%;}
-  }
-  @keyframes slide5{
-  from{width: 0;}
-  to{width: 20%;}
-  }
+  
 
   /* _________________ Projetos _________________ */
   #projetos {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    display: flex;  
   }
   
 
@@ -200,6 +165,63 @@
 
 
   /* _________________ Media Query _________________ */
+  @media (min-width: 501px) and (max-width: 1000px){
+    /* Home */
+    #text-apresentacao h1 {
+      color: #fff;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    #text-apresentacao h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .animacao h1 {
+      font-size: 2rem;
+    }
+    
+    .animacao span {
+      font-size: 2rem;
+      color: #fff;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #149ddd;
+    }
+
+    /* Sobre */
+    .sobre {
+      flex-direction: column;
+    }
+    .foto-apresentacao {
+      width: 60%;
+      margin-top: 120px;
+      margin-left: 55px;
+    }
+    .foto-apresentacao img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .text-apresentacao {
+      justify-content: normal;
+      margin-top: 10vh;
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+
+    /* Habilidades */
+    .cards_habilidade .card_item{
+      padding: 20px 20px;
+      width: 40%;
+    }
+
+    /* Projetos */
+   
+
+  }
+
   @media screen and (max-width: 500px) {
     /* Home */
     .home {
@@ -229,6 +251,7 @@
       padding: 10px;
     }
     .habilidades {
+      width: 100%;
       margin-top: 50px;
     }
     .habilidades-itens {
@@ -243,58 +266,9 @@
       padding: 10px;
     }
 
-    /* Projetos */
-    .img-projetos {
-      width: 100%;
-      height: 70vh;
-    }
-  }
-
-  @media (min-width: 501px) and (max-width: 1000px){
-    /* Home */
-    #text-apresentacao h1 {
-      color: #fff;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    #text-apresentacao h2 {
-      color: #fff;
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    
-    .animacao h1 {
-      font-size: 2rem;
-    }
-    
-    .animacao span {
-      font-size: 2rem;
-      color: #fff;
-      padding-bottom: 2px;
-      border-bottom: 1px solid #149ddd;
-    }
-
-    /* Sobre */
-    .sobre {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-      margin-left: -10px;
-    }
-    .foto-apresentacao img{
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .text-apresentacao {
-      margin-top: 10vh;
-      font-size: 3rem;
-      margin-bottom: 30px;
-    }
-    .itens {
-      width: 200px;
+    /* Habilidades */
+    .cards_habilidade .card_item{
+      width: 60%;
     }
 
     /* Projetos */
@@ -302,7 +276,4 @@
       width: 100%;
       height: 70vh;
     }
-
   }
-
- 
