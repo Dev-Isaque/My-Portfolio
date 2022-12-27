@@ -1,5 +1,4 @@
 .header-area {
-  background-image: linear-gradient(180deg, #000, transparent);
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
 }
-a.site-logo {
+h3.site-logo {
   font-size: 20px;
   margin-left: 15px;
   font-weight: 800;

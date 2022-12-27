@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Teste </title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+    <!-- Estilo Customizado -->
+    <link rel="stylesheet" href="./assets/css/main.css"> <!-- CSS Padrão -->
+    <link rel="stylesheet" href="./assets/css/componentes/menu-mobile.css"> <!-- CSS Menu-Mobile -->
+    <link rel="stylesheet" href="./assets/css/componentes/section.css"> <!-- CSS Section -->
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+*, *:before, *:after { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  font-family: "Lato", serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+  background: #61B2A0;
+  overflow-x: hidden;
+}
+
+label .menu {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  background: #FFF;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+  cursor: pointer;
+}
+
+label .hamburger {
+  position: absolute;
+  top: 135px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: #000;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+label .hamburger:after, label .hamburger:before {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+label .hamburger:before { top: -10px; }
+
+label .hamburger:after { bottom: -10px; }
+
+label input { display: none; }
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  border-radius: 0;
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+label input:checked + .menu + ul { opacity: 1; }
+
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: .25s 0s ease-in-out;
+  transition: .25s 0s ease-in-out;
+}
+
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+<label>
+<input type='checkbox'>
+<span class='menu'> <span class='hamburger'></span> </span>
+<ul>
+  <li> 
+    <a href="#home">
+      <span>
+        <i class="icon fa-solid fa-house"></i>
+      </span>
+      <span class="titulo"> Home </span> 
+    </a> 
+  </li>
+
+  <li> 
+    <a href="#sobre">
+      <span>
+        <i class="icon fa-solid fa-user"></i>
+      </span> 
+      <span class="titulo"> Sobre </span>                     
+    </a>
+  </li>
+
+  <li> 
+    <a href="#habilidades-container">
+      <span>
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+      </span> 
+      <span class="titulo"> Habilidades </span>                     
+    </a> 
+  </li>
+
+  <li> 
+    <a href="#projetos">
+      <span>
+        <i class="fa-solid fa-paste"></i>
+      </span> 
+      <span class="titulo"> Projetos </span>
+    </a>
+  </li>
+  
+  <li> 
+    <a href="#contato"> 
+      <span> 
+        <i class="icon fa-solid fa-address-book"></i>
+      </span>
+      <span class="titulo"> Contato </span>                    
+    </a>
+  </li>
+
+
+</ul>
+</label>
+
+  <!-- Section area -->
+  <Section id="home" class="section flex-center">
+    <div id="apresentacao">
+
+      <div id="text-apresentacao">
+        <h1>Olá,</h1>
+        <h2>Me chamo Isaque Soares</h2>
+      </div>
+                                                                                                                                                                                                                                                                                                                                                          
+      <div class="animacao">
+        <h1>Eu sou <span class="auto-type"></span></h1>
+      </div>
+
+    </div>
+  </Section>
+
+  <main id="main">
+      <!-- Inicio container sobre -->
+      <section id="sobre" class="section">
+        <div  class="container reveal"> 
+
+          <div class="sobre reveal">  <!-- Inicio container Apresentação -->
+
+            <div class="foto-apresentacao">
+              <img src="./assets/img/perfil.jpg" alt="eu" width="100%">
+            </div>
+            <div class="text-apresentacao">
+              <h1 class="titulos"> Sobre Mim </h1>
+
+              <div class="c-text-apresentacao">
+                  <p class="p-text-apresentacao">
+                    Olá me chamo Isaque. Tenho 21 anos <br>
+                    Sou estudante de Sistemas de informação - Atualmente no 5° periodo. 
+                    Tenho iniciado minha experiência dentro da programação pela área do Front-End.<br>
+                    Tudo Começou com um curso de desenvolvimento Web que comprei na plataforma Udemy, que me ensinou do 0 até aonde me encontro hoje em dia em questão de conhecimentos.<br>
+                    após ter concluido o curso decidir me aprofundar mais sobre o assunto, sendo assim comecei a ver as aulas do programa Discover disponibilizado pela plataforma de cursos da Rocketseat que por sinal eu recomendo qualquer um que esteja iniciando <br>
+                    participar dessa maratona. <br>
+                    Atualmente conclui o curso de Full Stack da Tech Academy - StartSe na qual me fez sentir que estava cade vez mais estava chegando a um degrau a menos no meu sonho de me tornar um Desenvolvedor Full Stack.
+                  </p>                       
+              </div>
+            
+          </div>  <!-- Fim container Apresentação -->
+
+        </div> <!-- Fim container sobre -->
+      </section>
+
+      <!-- Inicio container Habilidades -->
+      <section id="habilidades-container" class="section"> 
+        <div class="habilidades"> <!-- inicio body habilidades-->
+
+            <div class="flex-center reveal"> <!-- Header habilide-->
+              <h1 class="titulos">Minhas Habilidades</h1>
+            </div>
+
+            <div class="cards_habilidade reveal"> <!-- Card hablidade-->
+
+                <div class="card_item">
+                  <div class="card_inner">
+                    <img src="./assets/img/logotipos/html.png">
+                    <div class="card_name"> HTML </div>
+                    
+                  </div>
+                </div>
+
+                <div class="card_item">
+                  <div class="card_inner">
+                    <img src="./assets/img/logotipos/css.png">
+                    <div class="card_name"> CSS </div>
+                  </div>
+                </div>
+
+                <div class="card_item">
+                  <div class="card_inner">
+                    <img src="./assets/img/logotipos/js.png">
+                    <div class="card_name"> JAVASCRIPT </div>
+                  </div>
+                </div>
+
+                <div class="card_item">
+                  <div class="card_inner">
+                    <img src="./assets/img/logotipos/bootstrap.png">
+                    <div class="card_name"> BOOTSTRAP </div>
+                  </div>
+                </div>
+
+                <div class="card_item">
+                  <div class="card_inner">
+                    <img src="./assets/img/logotipos/jquery.png">
+                    <div class="card_name"> JQUERY </div>
+                  </div>
+                </div>
+                
+            </div> <!-- Fim card habilidade-->
+
+        </div> <!-- fim body habilidades-->
+ 
+      </section>  <!-- Fim container Habilidades -->
+
+</body>
+<script>
+    
+</script>
+</html>
