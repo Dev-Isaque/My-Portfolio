@@ -190,7 +190,7 @@
 
 
   /* _________________ Media Query _________________ */
-  @media (min-width: 577px) and (max-width: 999px){
+  @media (min-width: 769px) and (max-width: 1024px){ /* Laptops e tela pequenas */
     /* Home */
     #text-apresentacao h1 {
       color: #fff;
@@ -245,8 +245,10 @@
    
 
   }
-
-  @media screen and (max-width: 576px) {
+  @media (min-width: 481px) and (max-width: 768px){ /* iPads e Tables */
+    
+  }
+  @media screen and (max-width: 480px) { /* dispositivos moveis */ 
     /* Home */
     .home {
       width: 100%;
