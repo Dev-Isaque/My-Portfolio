@@ -57,7 +57,7 @@
                 </li>
 
                 <li class="nav-link">
-                  <a href="#habilidades-container">
+                  <a href="#habilidades">
                     <span>
                       <i class="fa-solid fa-screwdriver-wrench"></i>
                     </span> 
@@ -113,12 +113,10 @@
         <main id="main">
             <!-- Inicio container sobre -->
             <section id="sobre" class="section">
-              <div  class="container reveal"> 
-
-                <div class="sobre reveal">  <!-- Inicio container Apresentação -->
+              <div  class="sobre reveal">             
 
                   <div class="foto-apresentacao">
-                    <img src="./assets/img/perfil.jpg" alt="eu" width="100%">
+                    <img src="./assets/img/perfil.jpg" alt="eu">
                   </div>
                   <div class="text-apresentacao">
                     <h1 class="titulos"> Sobre Mim </h1>
@@ -135,58 +133,63 @@
                         </p>                       
                     </div>
                   
-                </div>  <!-- Fim container Apresentação -->
-
+                  </div>
+       
               </div> <!-- Fim container sobre -->
             </section>
 
             <!-- Inicio container Habilidades -->
-            <section id="habilidades-container" class="section"> 
-              <div class="habilidades"> <!-- inicio body habilidades-->
+            <section id="habilidades" class="section"> 
+              <div class="c-habilidades reveal"> <!-- inicio body habilidades-->
 
-                  <div class="flex-center reveal"> <!-- Header habilide-->
+                  <div class="flex-center"> <!-- Header habilidade-->
                     <h1 class="titulos">Minhas Habilidades</h1>
                   </div>
 
-                  <div class="cards_habilidade reveal"> <!-- Card hablidade-->
+                  <div class="h-list"> <!-- body habilidade -->
 
-                      <div class="card_item">
-                        <div class="card_inner">
-                          <img src="./assets/img/logotipos/html.png">
-                          <div class="card_name"> HTML </div>
-                          
+                      <div class="h-list-item">
+                        <h2 class="h-item-titulo">HTML :</h2>
+                        <div class="h-itens">
+                            <div class="inside1"></div>
                         </div>
+                        <h2>90%</h2>
                       </div>
+              
+                      <div class="h-list-item">
+                          <h2 class="h-item-titulo">CSS :</h2>
+                          <div class="h-itens">
+                              <div class="inside2"></div>
+                          </div>
+                          <h2 class="h-item-titulo">80%</h2>
+                      </div>
+              
+                      <div class="h-list-item">
+                        <h2 class="h-item-titulo">JAVASCRIPT :</h2>
+                        <div class="h-itens">
+                            <div class="inside3"></div>
+                        </div>
+                        <h2>65%</h2>
+                    </div>
+                    
+                    <div class="h-list-item">
+                        <h2 class="h-item-titulo">BOOTSTRAP :</h2>
+                        <div class="h-itens">
+                            <div class="inside4"></div>
+                        </div>
+                        <h2>70%</h2>
+                    </div>
 
-                      <div class="card_item">
-                        <div class="card_inner">
-                          <img src="./assets/img/logotipos/css.png">
-                          <div class="card_name"> CSS </div>
-                        </div>
+                    <div class="h-list-item">
+                      <h2 class="h-item-titulo">JQUERY :</h2>
+                      <div class="h-itens">
+                          <div class="inside5"></div>
                       </div>
-
-                      <div class="card_item">
-                        <div class="card_inner">
-                          <img src="./assets/img/logotipos/js.png">
-                          <div class="card_name"> JAVASCRIPT </div>
-                        </div>
-                      </div>
-
-                      <div class="card_item">
-                        <div class="card_inner">
-                          <img src="./assets/img/logotipos/bootstrap.png">
-                          <div class="card_name"> BOOTSTRAP </div>
-                        </div>
-                      </div>
-
-                      <div class="card_item">
-                        <div class="card_inner">
-                          <img src="./assets/img/logotipos/jquery.png">
-                          <div class="card_name"> JQUERY </div>
-                        </div>
-                      </div>
-                      
-                  </div> <!-- Fim card habilidade-->
+                      <h2>40%</h2>
+                    </div>
+  
+                  </div>
+                  
 
               </div> <!-- fim body habilidades-->
        
@@ -194,10 +197,10 @@
 
             <!-- Inicio container projetos -->
             <section id="projetos" class="section"> 
-              <div id="container-projetos" class="container reveal">
+              <div class="c-projetos reveal">
                 
                 <div>
-                  <h1 class="titulos" id="projetos-h1"> Meus Projetos </h1>
+                  <h1 class="titulos"> Meus Projetos </h1>
                 </div>
 
                 <div class="card" style="width: 18rem;">

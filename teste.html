@@ -124,6 +124,75 @@ h1 {
   width: 80%;
   text-align: center;
 }
+
+/* testes */
+/*_ Area de habilidades _*/
+#habilidades-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .habilidades {
+    padding-top: 10vh;
+  }
+  .habilidades h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    border-bottom: 0.5px solid #149ddd;
+  }
+
+  .cards_habilidade{
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .cards_habilidade .card_item{
+    margin: 40px 40px;
+    width: 15%;
+  }
+
+  .card_item:hover {
+    box-shadow: 0 0 15px #149ddd;
+  }
+  
+  .cards_habilidade .card_inner{
+    background: #fff;
+    border-radius: 5px;
+    padding: 35px 20px;
+    min-width: 225px;
+    min-height: 315px;
+    max-height: 370px;
+    width: 100%;
+  }
+  
+  .cards_habilidade .card_item img{
+    width: 80%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  .cards_habilidade .card_item .card_name{
+    color: #e36686;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .cards_habilidade .card_item{
+    color: #b6c0c2;
+    font-size: 12px;
+    font-weight: 100;
+    margin: 5px 0 10px;
+  }
+  
 </style>
 </head>
 
@@ -279,6 +348,47 @@ h1 {
  
       </section>  <!-- Fim container Habilidades -->
 
+
+      <!-- Exemplos -->
+      <div class="cards_habilidade"> <!-- Card hablidade-->
+
+        <div class="card_item">
+          <div class="card_inner">
+            <img src="./assets/img/logotipos/html.png">
+            <div class="card_name"> HTML </div>
+            
+          </div>
+        </div>
+
+        <div class="card_item">
+          <div class="card_inner">
+            <img src="./assets/img/logotipos/css.png">
+            <div class="card_name"> CSS </div>
+          </div>
+        </div>
+
+        <div class="card_item">
+          <div class="card_inner">
+            <img src="./assets/img/logotipos/js.png">
+            <div class="card_name"> JAVASCRIPT </div>
+          </div>
+        </div>
+
+        <div class="card_item">
+          <div class="card_inner">
+            <img src="./assets/img/logotipos/bootstrap.png">
+            <div class="card_name"> BOOTSTRAP </div>
+          </div>
+        </div>
+
+        <div class="card_item">
+          <div class="card_inner">
+            <img src="./assets/img/logotipos/jquery.png">
+            <div class="card_name"> JQUERY </div>
+          </div>
+        </div>
+        
+    </div> <!-- Fim card habilidade-->
 </body>
 <script>
     
