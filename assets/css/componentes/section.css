@@ -190,7 +190,67 @@
 
 
   /* _________________ Media Query _________________ */
-  @media (min-width: 769px) and (max-width: 1024px){ /* Laptops e tela pequenas */
+  @media (min-width: 769px) and (max-width: 999px){ /* Laptops e tela pequenas */
+    .section {
+      background: red;
+    }
+    /* Home */
+    #text-apresentacao h1 {
+      color: #fff;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    #text-apresentacao h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .animacao h1 {
+      font-size: 2rem;
+    }
+    
+    .animacao span {
+      font-size: 2rem;
+      color: #fff;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #149ddd;
+    }
+
+    /* Sobre */
+    .sobre {
+      padding-top: 285px;
+      flex-direction: column;
+    }
+    .foto-apresentacao {
+      margin-top: 50px;
+      width: 60%;
+    }
+    .foto-apresentacao img{
+      width: 100%;
+      height: auto;
+    }
+    .text-apresentacao {
+      justify-content: normal;
+      margin-top: 10vh;
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+
+    /* Habilidades */
+    .c-habilidades {
+      padding-top: 340px;
+    }
+
+    /* Projetos */
+   
+
+  }
+  @media (min-width: 481px) and (max-width: 768px){ /* iPads e Tables */
+    .section {
+      background: red;
+    }
     /* Home */
     #text-apresentacao h1 {
       color: #fff;
@@ -222,8 +282,7 @@
     }
     .foto-apresentacao {
       margin-top: 50px;
-      width: 40%;
-      margin-left: 60px;
+      width: 60%;
     }
     .foto-apresentacao img{
       width: 100%;
@@ -242,11 +301,6 @@
     }
 
     /* Projetos */
-   
-
-  }
-  @media (min-width: 481px) and (max-width: 768px){ /* iPads e Tables */
-    
   }
   @media screen and (max-width: 480px) { /* dispositivos moveis */ 
     /* Home */
