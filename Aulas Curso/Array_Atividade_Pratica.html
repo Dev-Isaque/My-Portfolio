@@ -1,0 +1,74 @@
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title> Array - Ordenação de elementos </title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+
+      body{
+        background-color: #fff;
+        box-sizing: border-box;
+      }
+
+      #container{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button {
+        margin-left: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+      }
+      button:hover {
+        opacity: 0.7;
+      }
+
+    </style>
+
+	</head>
+  <body>
+    <div id="container">
+      <input id="text" type="text" />
+      <button onclick="adicionar()" id="btn-adicioanr"> Adicionar </button>
+      <button onclick="ordenar()" id="btn-ordenar"> Ordenar </button>
+    </div>
+    
+
+    <script>
+      var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+      function adicionar() {
+        // alert('add')
+        var text = document.getElementById('text').value
+        
+        if(text === ''){
+          alert('Informe um valor válido')
+        } else {
+            if(objetos.indexOf(text) !== -1){
+              alert('Objeto já foi adicionado')
+            } else {
+              objetos.push(text)
+              console.log(objetos)
+            }
+        }
+        
+        document.getElementById('text').value = ''
+      }
+
+      function ordenar() {
+        objetos.sort()
+        console.log(objetos)
+      }
+      
+    </script>
+
+  </body>	
+
+</html>

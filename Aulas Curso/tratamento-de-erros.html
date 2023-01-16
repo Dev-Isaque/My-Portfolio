@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tratamento de erros com try, catch, throw e finally </title>
+        
+    <script>
+        // try - tente | catch - pegar | finally - finalmente | throw - lançar
+
+        var video = Array()
+
+        video[1] = Array()
+        video[1]['nome'] = 'Fullmetal Alchemist'
+        video[1]['categoria'] = 'Anime'
+
+        function getVideo(video) { //forçando a criação de um erro
+
+            // tentando resolver o erro
+            try {
+            //lógica 
+            //http
+                console.log(video[0]['nome'])
+            } catch(erro) {
+                tratarErro(erro)
+                console.log('Agora sim podemos tratar esse erro')
+            } finally {
+                console.log('Sempre passa por aqui')
+            }
+
+            console.log('A aplicação não morreu')
+        }
+
+        function tratarErro(e) {
+            //lógica para registrar o erro no servidor
+            console.log(e)
+        }
+
+        getVideo(video)
+    </script>
+</head>
+<body>
+</body>
+</html>
