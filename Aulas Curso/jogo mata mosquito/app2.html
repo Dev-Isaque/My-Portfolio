@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jogo mata mosquito</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./jogo.js"></script>
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+    
+    <div class="painel">
+        <div class="vidas">
+            <img id="vd1" src="./imagens/coracao_cheio.png" alt="coração vazio">
+            <img id="vd2" src="./imagens/coracao_cheio.png" alt="coração Cheio 1">
+            <img id="vd3" src="./imagens/coracao_cheio.png" alt="coração Cheio 2">
+        </div>
+
+        <div class="cronometro">
+            Tempo restante : ?
+        </div>
+    </div>
+
+    <script>
+        setInterval(function(){
+            posicaoRandomica()
+        }, 1500)
+    </script>
+
+</body>
+</html>
