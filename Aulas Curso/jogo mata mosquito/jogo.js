@@ -1,6 +1,23 @@
 var altura = 0
 var largura = 0 
 var vidas = 1
+var tempo = 60
+
+var criaMosquitoTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'normal'){
+    // 1500
+    criaMosquitoTempo = 1500
+} else if (nivel === 'dificil') {
+    // 1000
+    criaMosquitoTempo = 1000
+} else if(nivel === 'chucknorris') {
+    // 750
+    criaMosquitoTempo = 750
+}
 
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight
@@ -10,6 +27,20 @@ function ajustaTamanhoPalcoJogo() {
 }
 
 ajustaTamanhoPalcoJogo()
+
+var cronometro = setInterval(function(){
+    
+    tempo -= 1
+
+    if(tempo < 0) {
+        clearInterval(cronometro)
+        clearInterval(criaMosca)
+        window.location.href = 'vitoria.html'
+    } else {
+        document.getElementById('cronometro').innerHTML = tempo
+    }
+
+}, 1000) 
 
 function posicaoRandomica() {
 
@@ -27,8 +58,8 @@ function posicaoRandomica() {
       
     }
 
-    var posicaoX = Math.floor(Math.random() * largura) - 90
-    var posicaoY = Math.floor(Math.random() * altura) - 90
+    var posicaoX = Math.floor(Math.random() * largura) - 150
+    var posicaoY = Math.floor(Math.random() * altura) - 150
 
     posicaoX = posicaoX < 0 ? 0 : posicaoX
     posicaoY = posicaoX < 0 ? 0 : posicaoY
@@ -38,7 +69,7 @@ function posicaoRandomica() {
     //Criar o elemento HTML
 
     var mosquito = document.createElement('img')
-    mosquito.src = './imagens/capi-gorda.png'
+    mosquito.src = './imagens/mosquito.png'
     mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
