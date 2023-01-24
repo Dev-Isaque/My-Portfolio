@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Operador de declaração de variáveis Const </title>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+        <script type="text/babel"> 
+           
+           const SERIE = 'Friends'
+            // não e possivel regastar a varivel Const SERIE e atribuir outro valor a ela, se fizer isso ira dar um erro
+
+            function x() {
+                //const não sofre hosting, ou seja, se ela for declarado dentro de um bloco era so podera ser usada dentro do determinado bloco 
+                const SERIE = 'The Walking Dead'
+                console.log('Dentro da função: ' + SERIE )
+            }
+
+            x()
+
+            console.log('Escopo global: ' + SERIE)
+        </script>
+    </head>
+    <body>
+
+        <div id="output"></div>
+
+    </body>
+</html>
