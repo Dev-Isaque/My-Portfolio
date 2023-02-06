@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> OO - Objetos literais - Melhorias de notação </title>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+            
+            let nome = 'Isaque' //ex: document.getElementById('#nome').value
+            let idade = 21
+            let sexo = 'Masculino'
+            let profissao = 'Programador'
+
+            let objeto = {
+                nome: nome,
+                idade: idade,
+                sexo: sexo,
+                profissao: profissao,
+                exibirResumo: function(){
+                    console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+                }
+            }
+
+            console.log(objeto)
+            objeto.exibirResumo()
+
+            let objeto2 = {
+                nome , // nome = nome variável / valor = valor da variável
+                idade ,
+                sexo ,
+                profissao ,
+                exibirResumo() {
+                    console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+                }
+            }
+
+            console.log(objeto2)
+            objeto.exibirResumo()
+
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>

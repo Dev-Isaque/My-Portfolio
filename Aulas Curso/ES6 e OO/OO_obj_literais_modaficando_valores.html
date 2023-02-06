@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> OO - Objetos literais - Modificando valores </title>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+            
+            let pessoa = {
+                nome: 'José',
+                idade: 45
+            }
+
+            console.log(pessoa.nome)
+
+            pessoa.nome = 'Fernanda'
+            pessoa.idade = 32
+
+            console.log(pessoa.nome)
+            
+
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>

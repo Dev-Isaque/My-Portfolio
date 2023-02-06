@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background: url(../imagem/background-pista.png);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#game {
+    width: 600px;
+    height: 100vh;
+    background: url(../imagem/pista.png);
+    background-repeat: no-repeat;
+}
