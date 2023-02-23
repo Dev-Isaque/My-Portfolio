@@ -3,7 +3,7 @@
   background: #000;
   color: #fff;
   width: 100%;
-  height: 100vh;
+  height: auto;
 } 
 
 #home {
@@ -50,7 +50,7 @@
   /* _________________ Sobre _________________ */
   .sobre {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +84,6 @@
   }
 
   /*_ Area de habilidades _*/
-
   .c-habilidades {
     padding-top: 15vh;
   }
@@ -152,6 +151,13 @@
     background: #149ddd;
     animation: slide5 2s ease-in-out;
   }
+  .inside6{
+    border-radius: 20px;
+    width: 30%;
+    height: 24px;
+    background: #149ddd;
+    animation: slide6 2s ease-in-out;
+  }
 
   @keyframes slide1{
   from{ width: 0; }
@@ -173,6 +179,10 @@
   from{width: 0;}
   to{width: 40%;}
   }
+  @keyframes slide6{
+  from{width: 0;}
+  to{width: 30%;}
+  }
 
   /* _________________ Projetos _________________ */
   #projetos {
@@ -180,7 +190,38 @@
     justify-content: center;
     padding-top: 15vh;
   }
+
+  :root {
+    --gradient: linear-gradient(to left top, #149ddd 10%, #000000 90%) !important;
+  }
   
+  
+  .card {
+    background: #222;
+    border: 1px solid #000000;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    border: 5px solid;
+    border-image-slice: 1;
+    background: var(--gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    border-image-source:  var(--gradient) !important; 
+    text-decoration: none;
+    transition: all .4s ease;
+  }
+  
+  .btn:hover, .btn:focus {
+    background: var(--gradient) !important;
+    -webkit-background-clip: none !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 5px solid #fff !important; 
+    box-shadow: #222 1px 0 10px;
+    text-decoration: underline;
+  }
 
   /* _________________ Contato _________________ */
   #contato {
