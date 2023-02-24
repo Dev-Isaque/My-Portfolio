@@ -47,6 +47,27 @@
   border-bottom: 0.5px solid #149ddd;
 }
 
+.curriculo {
+  margin-top: 100px;
+  border-radius: 30px;
+  width: 200px;
+  height: 35px;
+  border: 2px #149ddd solid;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20,157,221,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.curriculo:hover, .btn-curriculo:hover {
+  opacity: 0.9;
+  color: #fff;
+}
+
+.btn-curriculo {
+  padding-left: 34px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
   /* _________________ Sobre _________________ */
   .sobre {
     width: 100%;
@@ -218,8 +239,8 @@
     background: var(--gradient) !important;
     -webkit-background-clip: none !important;
     -webkit-text-fill-color: #fff !important;
-    border: 5px solid #fff !important; 
-    box-shadow: #222 1px 0 10px;
+    border: 1px solid #fff !important; 
+    box-shadow: #222 1px 0 5px;
     text-decoration: underline;
   }
 
