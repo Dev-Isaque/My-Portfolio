@@ -19,6 +19,7 @@
   #text-apresentacao h1 {
     color: #fff;
     font-size: 3.5rem;
+    margin-top: 80px;
     margin-bottom: 10px;
   }
   #text-apresentacao h2 {
@@ -48,16 +49,21 @@
 }
 
 .curriculo {
-  margin-top: 100px;
+  margin-top: 30vh;
+  margin-left: 10vh;
   border-radius: 30px;
   width: 200px;
   height: 35px;
   border: 2px #149ddd solid;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20,157,221,1) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20, 157, 221, 0.37) 35%, rgba(0, 213, 255, 0.322) 100%);
 }
 
-.curriculo:hover, .btn-curriculo:hover {
-  opacity: 0.9;
+.curriculo:hover {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20, 157, 221, 0.767) 35%, rgba(0, 213, 255, 0.685) 100%);
+  color: #fff;
+}
+
+.btn-curriculo:hover {
   color: #fff;
 }
 
@@ -79,6 +85,7 @@
 
   /*_ Area de apresentação _*/
   .foto-apresentacao {
+    margin-top: 60px;
     margin-left: 50px;
     margin-right: 50px;
     width: 40%;
