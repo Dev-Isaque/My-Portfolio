@@ -71,3 +71,51 @@ $(document).ready(function() {
       $(this).find('.skillbar-bar').animate({ width: $(this).attr('data-percent') }, 3000);
   });
 });
+
+
+// Slide de Projetos Função
+
+const slideshow = document.querySelector(".slideshow");
+const prevButton = document.querySelector(".prev-slide");
+const nextButton = document.querySelector(".next-slide");
+const slideIndicators = document.querySelectorAll(".slide-indicator");
+
+let slideIndex = 0;
+
+function showSlide() {
+  slideshow.style.transform = `translateX(-${slideIndex * 100}%)`;
+  slideIndicators.forEach((indicator, index) => {
+    if (index === slideIndex) {
+      indicator.classList.add("active");
+    } else {
+      indicator.classList.remove("active");
+    }
+  });
+}
+
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex >= slideIndicators.length) {
+    slideIndex = 0;
+  }
+  showSlide();
+}
+
+function prevSlide() {
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = slideIndicators.length - 1;
+  }
+  showSlide();
+}
+
+nextButton.addEventListener("click", nextSlide);
+prevButton.addEventListener("click", prevSlide);
+slideIndicators.forEach((indicator, index) => {
+  indicator.addEventListener("click", () => {
+    slideIndex = index;
+    showSlide();
+  });
+});
+
+showSlide();

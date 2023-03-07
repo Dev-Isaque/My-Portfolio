@@ -116,7 +116,7 @@
 
   /*_ Area de habilidades _*/
   #habilidades {
-    padding-top: 15vh;
+    padding-top: 12vh;
   }
 
   .h-list {
@@ -222,7 +222,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 15vh;
   }
 
   :root {
@@ -257,33 +256,93 @@
     text-decoration: underline;
   }
 
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slideshow {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slideshow-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+  
+  .slide-indicators {
+    display: flex;
+  }
+  
+  .slide-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .slide-indicator.active {
+    background-color: red;
+  }
   /* _________________ Contato _________________ */
   #contato {
     width: 100%;
     height: 100vh;
     display: flex;  
     justify-content: center;
-    padding-top: 15vh;
+    padding-top: 12vh;
+  }
+
+  #c-redes {
+    width: 80%;
+    height: 40vh;
+    margin-left: 10%;
   }
   
   .redes-sociais {
-    width: 250px;
+    width: 300px;
     height: 250px;
   }
 
   .redes2 {
     width: 200px;
     height: 100%;
-    border: 5px solid white;
   }
 
   .redes-sociais a i{
-    font-size: 200px;
+    font-size: 100px;
     color: #149ddd;
   }
 
   
-
 
   /* _________________ Media Query _________________ */
   @media (min-width: 769px) and (max-width: 999px){ /* Laptops e tela pequenas */
