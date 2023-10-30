@@ -34,7 +34,7 @@ function navLinkClick() {
 const li=document.querySelectorAll(".nav-link");
 const sec=document.querySelectorAll("section");
 
-function activeMenu() {
+function activeMenu() {wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwa
     let len=sec.length;
     while(--len && window.scrollY + 180 < sec[len].offsetTop){}
     li.forEach(ltx => ltx.classList.remove("active"));
